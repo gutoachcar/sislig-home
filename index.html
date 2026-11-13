@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google" content="notranslate">
+<meta name="robots" content="noindex">
+<title>Sistemas LIG</title>
+<meta name="description" content="Os sistemas da LIG Veículos Elétricos num lugar só.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800&display=swap">
+<style>
+/* Mesmas cores e assinatura do kit LIG dos sistemas (Desktop/Claude/lig-kit). Tema claro, sempre. */
+:root{
+  --azul:#292F5E; --azul-2:#3A4280; --vermelho:#D32139; --petroleo:#155E75;
+  --tinta:#14152B; --texto-2:#55577A; --apagado:#8688A6; --borda:#E1E3EE; --fundo:#F2F3F8; --branco:#FFFFFF;
+  --sombra:0 1px 2px rgba(41,47,94,.06),0 10px 28px rgba(41,47,94,.10);
+  --sombra-alta:0 2px 4px rgba(41,47,94,.08),0 22px 48px rgba(41,47,94,.16);
+  --fonte:"Exo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{min-height:100vh;min-height:100dvh;background:var(--fundo);color:var(--tinta);font-family:var(--fonte);line-height:1.5;position:relative;overflow-x:hidden}
+body::before,body::after{content:"";position:fixed;border-radius:50%;pointer-events:none;z-index:0}
+body::before{width:760px;height:760px;right:-280px;top:-340px;background:radial-gradient(circle,rgba(58,66,128,.20),rgba(58,66,128,0) 68%)}
+body::after{width:640px;height:640px;left:-260px;bottom:-300px;background:radial-gradient(circle,rgba(21,94,117,.16),rgba(21,94,117,0) 68%)}
+main{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:48px 16px 32px;display:flex;flex-direction:column;gap:26px}
+.lk{--h:40px;display:inline-flex;align-items:flex-end;height:var(--h);gap:calc(var(--h)*.05);color:var(--azul);flex:none;line-height:1}
+.lk svg{height:var(--h);width:calc(var(--h)*740/723);display:block;flex:none}
+.lk .nome{font-weight:300;font-size:calc(var(--h)*.52);line-height:1;padding-bottom:calc(var(--h)*.15);letter-spacing:.005em;white-space:nowrap}
+.topo{display:flex;justify-content:space-between;align-items:flex-end;gap:12px 24px;flex-wrap:wrap}
+.topo p{margin:0;color:var(--texto-2);font-size:15px}
+.grupo{display:flex;flex-direction:column;gap:14px}
+.grupo h2{margin:0;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--apagado)}
+.sis{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.s-card{background:linear-gradient(180deg,var(--branco),#FAFAFD);border:1px solid var(--borda);border-radius:18px;box-shadow:var(--sombra);padding:20px;display:flex;flex-direction:column;gap:14px;text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;min-width:0}
+.s-card:hover,.s-card:focus-visible{transform:translateY(-4px);box-shadow:var(--sombra-alta);border-color:#CDD0E2;outline:none}
+.s-card:focus-visible{box-shadow:var(--sombra-alta),0 0 0 3px rgba(21,94,117,.35)}
+.ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(145deg,var(--azul-2),var(--azul));box-shadow:0 8px 16px rgba(41,47,94,.24),inset 0 1px 0 rgba(255,255,255,.18)}
+.ic svg{width:23px;height:23px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.desc{font-size:14px;color:var(--texto-2);line-height:1.45}
+.end{font-size:13px;color:var(--petroleo);font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto}
+.seta{transition:transform .2s ease}
+.s-card:hover .seta{transform:translateX(4px)}
+.s-card.largo{flex-direction:row;align-items:center;gap:18px;flex-wrap:wrap}
+.s-card.largo .meio{flex:1;min-width:200px;display:flex;flex-direction:column;gap:8px}
+.s-card.largo .ic{background:linear-gradient(145deg,var(--petroleo),var(--azul));box-shadow:0 8px 16px rgba(21,94,117,.24),inset 0 1px 0 rgba(255,255,255,.18)}
+.s-card.largo .end{margin-top:0}
+footer{position:relative;z-index:1;text-align:center;font-size:13px;color:var(--apagado);padding:8px 16px 32px}
+footer a{color:var(--petroleo);font-weight:600;text-decoration:none}
+footer a:hover{text-decoration:underline}
+@media (max-width:520px){main{padding-top:32px;gap:22px} .s-card.largo{flex-direction:column;align-items:flex-start} .s-card.largo .end{width:100%}}
+@media (prefers-reduced-motion:reduce){.s-card,.seta{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="lig" viewBox="30 38 740 723">
+    <circle fill="#D32139" cx="298.33" cy="95.48" r="50.36"/>
+<path fill="#D32139" d="M762.82,95.09c0,12.03-360.42,107.42-360.42,0S762.82,83.06,762.82,95.09z"/>
+<path fill="var(--tinta-logo,#292F5E)" d="M636.42,496.34h-73.01v0h-2.37v0h-39.57c-15.62,0-28.53-2.54-28.53-18.94c0-16.4,17.24-16.51,28.53-16.51h86.76c105.6,0,128.02-71.94,128.02-125.91c0-44.9-7.51-57.77-14.1-73.36c0,0,70.46-71.59,27.09-71.59c-43.37,0-213.3,0-213.3,0c-84.4,0-129.79,43.73-129.79,133.31c0,37.39,10.26,84.01,41.3,103.76c-28.23,8.83-41.52,33.25-43.32,60.25c0,46.03,7.8,88.77,96.73,88.77h39.54v-0.05h71.72c28.01,0.3,36.72,13.19,36.72,34.32v27.33c0,21.9-4.23,39.36-39.64,39.36c0,0-52.22-0.08-103.89-0.15v0.04c-57.79-1.04-86.73-17.85-97.21-47.16c-3.14,1.94-4.85,7.38-4.78,17.85c0.19,27.36,0.2,35.06,0.15,35.89c1.98,46.18,30.16,72.94,107.51,72.94h24.26v-0.06l94.52,0c92.4,0,117.44-54.67,117.44-108.62v-40.56C747.2,531.64,704.15,496.34,636.42,496.34z M551.46,269.39h37.88c34.77,0,47.22,15.04,48.18,53.96c0.64,33.93-10.05,58.19-47.47,58.19H550.4c-34.91,0-45.49-23.63-45.49-58.19C504.91,295.42,511.47,269.39,551.46,269.39z"/>
+<path fill="var(--tinta-logo,#292F5E)" d="M345.57,576.25c0-83.03,0-302.49,0-331.63c0-37.83-98.35-52.96-98.35-52.96v384.59H345.57z"/>
+<path fill="var(--tinta-logo,#292F5E)" d="M135,442.77c0,0,0-42.07,0-96.64c0-90.93,0-216.57,0-240.21c0-4,0-7.2,0-9.46c0-37.83-98.35-52.96-98.35-52.96v9.46v293.17v96.64c0,95.44,32.9,130.44,89.72,133.11h1.46c3.05-0.04,14.1-0.01,43.6,0.2c12.98,0.09,19.7-2.03,22.11-5.92C156.04,556.76,135,519.1,135,442.77z"/>
+  </symbol>
+</svg>
+<main>
+  <header class="topo">
+    <h1 style="margin:0"><span class="lk" style="--h:48px"><svg viewBox="0 0 740 723" role="img" aria-label="LIG"><use href="#lig"/></svg><span class="nome">Sistemas</span></span></h1>
+    <p>Escolha o sistema para entrar.</p>
+  </header>
+
+  <section class="grupo" aria-labelledby="g-equipe">
+    <h2 id="g-equipe">Equipe LIG</h2>
+    <div class="sis">
+      <a class="s-card" href="https://people.sislig.com.br">
+        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <span class="lk" style="--h:28px"><svg viewBox="0 0 740 723" aria-hidden="true"><use href="#lig"/></svg><span class="nome">People</span></span>
+        <span class="desc">RH: colaboradores, férias, ponto, contracheque e datas comemorativas.</span>
+        <span class="end">people.sislig.com.br <span class="seta" aria-hidden="true">→</span></span>
+      </a>
+      <a class="s-card" href="https://sales.sislig.com.br">
+        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span>
+        <span class="lk" style="--h:28px"><svg viewBox="0 0 740 723" aria-hidden="true"><use href="#lig"/></svg><span class="nome">Sales</span></span>
+        <span class="desc">Comercial: clientes, propostas, metas, conversas e a Ligia.</span>
+        <span class="end">sales.sislig.com.br <span class="seta" aria-hidden="true">→</span></span>
+      </a>
+      <a class="s-card" href="https://ops.sislig.com.br">
+        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span>
+        <span class="lk" style="--h:28px"><svg viewBox="0 0 740 723" aria-hidden="true"><use href="#lig"/></svg><span class="nome">Ops</span></span>
+        <span class="desc">Operação: frota, reservas, contratos, visitas e roteiros.</span>
+        <span class="end">ops.sislig.com.br <span class="seta" aria-hidden="true">→</span></span>
+      </a>
+      <a class="s-card" href="https://imports.sislig.com.br">
+        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4"/><path d="M12 2v3"/></svg></span>
+        <span class="lk" style="--h:28px"><svg viewBox="0 0 740 723" aria-hidden="true"><use href="#lig"/></svg><span class="nome">Imports</span></span>
+        <span class="desc">Importação: embarques, documentos, FINIMP e câmbio.</span>
+        <span class="end">imports.sislig.com.br <span class="seta" aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="grupo" aria-labelledby="g-clientes">
+    <h2 id="g-clientes">Para os clientes</h2>
+    <a class="s-card largo" href="https://smartfleet.ligveiculos.com.br">
+      <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
+      <span class="meio">
+        <span class="lk" style="--h:28px"><svg viewBox="0 0 740 723" aria-hidden="true"><use href="#lig"/></svg><span class="nome">Smart Fleet</span></span>
+        <span class="desc">O portal onde o cliente acompanha a frota alugada em tempo real.</span>
+      </span>
+      <span class="end">smartfleet.ligveiculos.com.br <span class="seta" aria-hidden="true">→</span></span>
+    </a>
+  </section>
+</main>
+<footer>LIG Veículos Elétricos · <a href="https://ligveiculos.com.br">ligveiculos.com.br</a></footer>
+</body>
+</html>
